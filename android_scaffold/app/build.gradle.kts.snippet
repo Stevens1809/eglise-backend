@@ -1,0 +1,34 @@
+// À ajouter dans app/build.gradle.kts (dependencies { ... })
+// Versions à ajuster selon ton environnement Android Studio actuel (celui d'AquaFlow).
+
+/*
+dependencies {
+    // Réseau
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
+
+    // Room (cache local offline-first)
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
+    kapt("androidx.room:room-compiler:2.6.1")
+
+    // WorkManager (synchro fiable en arrière-plan)
+    implementation("androidx.work:work-runtime-ktx:2.9.1")
+
+    // Firebase Cloud Messaging (notifications push)
+    implementation(platform("com.google.firebase:firebase-bom:33.1.0"))
+    implementation("com.google.firebase:firebase-messaging-ktx")
+
+    // Coroutines
+    implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.8.1")
+}
+*/
+
+// N'oublie pas :
+// 1. Ajouter le plugin "com.google.gms.google-services" (google-services.json
+//    à télécharger depuis la console Firebase, comme pour AquaFlow).
+// 2. Ajouter kotlin("kapt") dans les plugins pour Room.
+// 3. Créer un FirebaseMessagingService qui récupère le token et l'envoie
+//    via RetrofitClient.api.updateFcmToken(...) au démarrage de l'app.
