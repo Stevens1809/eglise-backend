@@ -1,2 +1,1 @@
-release: python manage.py collectstatic --noinput && python manage.py migrate && python manage.py seed_data
-web: gunicorn config.wsgi --log-file -
+web: python manage.py migrate --noinput && python manage.py collectstatic --noinput && python manage.py seed_data && gunicorn config.wsgi --log-file -
